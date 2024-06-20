@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Dice Roller</title>
+    <link rel="stylesheet" href="css/styles_outra_pagina.css">
+</head>
+<body>
+    <header>
+        <h1>RPG Dice Roller</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Voltar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dados">
+            <h2>Rolar Dados</h2>
+            <div class="dice-container">
+                <div class="dice-option">
+                    <figure class="dice-figure">
+                        <figcaption>D4</figcaption>
+                        <img src="images/dice_d4.png" alt="D4" class="dice-image" onclick="rollDice(4)">
+                    </figure>
+                    <input type="number" id="quantidadeD4" min="0" value="0" style="width: 40px;">
+                </div>
+                <div class="dice-option">
+                    <figure class="dice-figure">
+                        <figcaption>D6</figcaption>
+                        <img src="images/dice_d6.png" alt="D6" class="dice-image" onclick="rollDice(6)">
+                    </figure>
+                    <input type="number" id="quantidadeD6" min="0" value="0" style="width: 40px;">
+                </div>
+                <div class="dice-option">
+                    <figure class="dice-figure">
+                        <figcaption>D8</figcaption>
+                        <img src="images/dice_d8.png" alt="D8" class="dice-image" onclick="rollDice(8)">
+                    </figure>
+                    <input type="number" id="quantidadeD8" min="0" value="0" style="width: 40px;">
+                </div>
+                <div class="dice-option">
+                    <figure class="dice-figure">
+                        <figcaption>D10</figcaption>
+                        <img src="images/dice_d10.png" alt="D10" class="dice-image" onclick="rollDice(10)">
+                    </figure>
+                    <input type="number" id="quantidadeD10" min="0" value="0" style="width: 40px;">
+                </div>
+                <div class="dice-option">
+                    <figure class="dice-figure">
+                        <figcaption>D12</figcaption>
+                        <img src="images/dice_d12.png" alt="D12" class="dice-image" onclick="rollDice(12)">
+                    </figure>
+                    <input type="number" id="quantidadeD12" min="0" value="0" style="width: 40px;">
+                </div>
+                <div class="dice-option">
+                    <figure class="dice-figure">
+                        <figcaption>D20</figcaption>
+                        <img src="images/dice_d20.png" alt="D20" class="dice-image" onclick="rollDice(20)">
+                    </figure>
+                    <input type="number" id="quantidadeD20" min="0" value="0" style="width: 40px;">
+                </div>
+            </div>
+            <div class="controls">
+                <label for="modificador">Modificador (+/- valor final):</label>
+                <input type="number" id="modificador" value="0">
+                <button onclick="adicionarModificador()">Aplicar Modificador</button>
+            </div>
+        </section>
+        <section id="resultado">
+            <div id="resultadoContainer">
+                <p class="result">Resultado: <span id="resultadoValor"></span></p>
+                <p id="mensagem"></p>
+            </div>
+            <div id="historico">
+                <h3>Histórico de Rolagens</h3>
+                <ul id="historicoLista"></ul>
+            </div>
+        </section>
+    </main>
+    <script src="js/scripts_outra_pagina.js"></script>
+</body>
+</html>
